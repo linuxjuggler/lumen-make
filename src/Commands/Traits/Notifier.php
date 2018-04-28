@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Traits;
+namespace Damascene\LumenMake\Commands\Traits;
 
 trait Notifier
 {
