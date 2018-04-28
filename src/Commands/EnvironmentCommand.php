@@ -1,6 +1,6 @@
 <?php
 
-namespace Damascene\Commands;
+namespace Damascene\LumenMake\Commands;
 
 use Illuminate\Console\Command;
 
