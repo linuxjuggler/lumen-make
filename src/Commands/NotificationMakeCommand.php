@@ -3,8 +3,8 @@
 namespace Damascene\LumenMake\Commands;
 
 use Illuminate\Console\GeneratorCommand;
-use App\Console\Commands\Traits\Notifier;
 use Symfony\Component\Console\Input\InputOption;
+use Damascene\LumenMake\Commands\Traits\Notifier;
 
 class NotificationMakeCommand extends GeneratorCommand
 {
