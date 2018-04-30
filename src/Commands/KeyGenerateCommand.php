@@ -91,7 +91,7 @@ class KeyGenerateCommand extends Command
         file_put_contents($this->environmentFilePath(), preg_replace(
             $this->keyReplacementPattern(),
             'APP_KEY='.$key,
-            file_get_contents($this->laravel->environmentFilePath())
+            file_get_contents($this->environmentFilePath())
         ));
     }
 
