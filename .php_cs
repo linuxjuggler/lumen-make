@@ -18,5 +18,6 @@ return PhpCsFixer\Config::create()
         'phpdoc_order' => true,
         'phpdoc_annotation_without_dot' => true,
         'ordered_imports' => ['sortAlgorithm' => 'length'],
+        'concat_space' => ['spacing' => 'one']
     ])
     ->setFinder($finder);
