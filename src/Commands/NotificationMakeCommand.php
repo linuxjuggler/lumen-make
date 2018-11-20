@@ -39,8 +39,8 @@ class NotificationMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         return $this->option('markdown')
-                        ? __DIR__.'/stubs/markdown-notification.stub'
-                        : __DIR__.'/stubs/notification.stub';
+                        ? __DIR__ . '/stubs/markdown-notification.stub'
+                        : __DIR__ . '/stubs/notification.stub';
     }
 
     /**
@@ -52,7 +52,7 @@ class NotificationMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Notifications';
+        return $rootNamespace . '\Notifications';
     }
 
     /**

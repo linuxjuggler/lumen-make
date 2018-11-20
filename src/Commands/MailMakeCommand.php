@@ -39,8 +39,8 @@ class MailMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         return $this->option('markdown')
-                        ? __DIR__.'/stubs/markdown-mail.stub'
-                        : __DIR__.'/stubs/mail.stub';
+                        ? __DIR__ . '/stubs/markdown-mail.stub'
+                        : __DIR__ . '/stubs/mail.stub';
     }
 
     /**
@@ -52,7 +52,7 @@ class MailMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Mail';
+        return $rootNamespace . '\Mail';
     }
 
     /**

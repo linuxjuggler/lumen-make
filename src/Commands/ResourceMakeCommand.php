@@ -14,12 +14,14 @@ class ResourceMakeCommand extends GeneratorCommand
      * @var string
      */
     protected $name = 'make:resource';
+
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Create a new resource';
+
     /**
      * The type of class being generated.
      *
@@ -29,14 +31,13 @@ class ResourceMakeCommand extends GeneratorCommand
 
     /**
      * Execute the console command.
-     *
-     * @return bool|null
      */
     public function handle()
     {
         if ($this->collection()) {
             $this->type = 'Resource collection';
         }
+
         parent::handle();
     }
 
@@ -48,8 +49,8 @@ class ResourceMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         return $this->collection()
-            ? __DIR__.'/stubs/resource-collection.stub'
-            : __DIR__.'/stubs/resource.stub';
+                    ? __DIR__ . '/stubs/resource-collection.stub'
+                    : __DIR__ . '/stubs/resource.stub';
     }
 
     /**
@@ -60,7 +61,7 @@ class ResourceMakeCommand extends GeneratorCommand
     protected function collection()
     {
         return $this->option('collection') ||
-            Str::endsWith($this->argument('name'), 'Collection');
+               Str::endsWith($this->argument('name'), 'Collection');
     }
 
     /**
@@ -72,7 +73,7 @@ class ResourceMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Http\Resources';
+        return $rootNamespace . '\Http\Resources';
     }
 
     /**
@@ -83,7 +84,7 @@ class ResourceMakeCommand extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['collection', 'c', InputOption::VALUE_NONE, 'Create a resource collection.'],
+            ['collection', 'c', InputOption::VALUE_NONE, 'Create a resource collection'],
         ];
     }
 }

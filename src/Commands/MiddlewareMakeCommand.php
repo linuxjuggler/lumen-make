@@ -34,7 +34,7 @@ class MiddlewareMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/middleware.stub';
+        return __DIR__ . '/stubs/middleware.stub';
     }
 
     /**
@@ -46,6 +46,6 @@ class MiddlewareMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Http\Middleware';
+        return $rootNamespace . '\Http\Middleware';
     }
 }

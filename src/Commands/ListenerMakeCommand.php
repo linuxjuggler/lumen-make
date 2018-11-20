@@ -45,7 +45,7 @@ class ListenerMakeCommand extends GeneratorCommand
             'Illuminate',
             '\\',
         ])) {
-            $event = $this->laravel->getNamespace().'Events\\'.$event;
+            $event = $this->laravel->getNamespace() . 'Events\\' . $event;
         }
 
         $stub = str_replace('DummyEvent', class_basename($event), parent::buildClass($name));
@@ -61,8 +61,8 @@ class ListenerMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         return $this->option('queued')
-            ? __DIR__.'/stubs/listener-queued.stub'
-            : __DIR__.'/stubs/listener.stub';
+            ? __DIR__ . '/stubs/listener-queued.stub'
+            : __DIR__ . '/stubs/listener.stub';
     }
 
     /**
@@ -86,7 +86,7 @@ class ListenerMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Listeners';
+        return $rootNamespace . '\Listeners';
     }
 
     /**

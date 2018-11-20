@@ -35,7 +35,7 @@ class TestMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/test.stub';
+        return __DIR__ . '/stubs/test.stub';
     }
 
     /**
@@ -49,7 +49,7 @@ class TestMakeCommand extends GeneratorCommand
     {
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
 
-        return $this->laravel->basePath().'/tests'.str_replace('\\', '/', $name).'.php';
+        return $this->laravel->basePath() . '/tests' . str_replace('\\', '/', $name) . '.php';
     }
 
     /**

@@ -34,7 +34,7 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/job.stub';
+        return __DIR__ . '/stubs/job.stub';
     }
 
     /**
@@ -46,6 +46,6 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Jobs';
+        return $rootNamespace . '\Jobs';
     }
 }

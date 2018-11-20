@@ -34,7 +34,7 @@ class KeyGenerateCommand extends Command
         $key = $this->generateRandomKey();
 
         if ($this->option('show')) {
-            return $this->line('<comment>'.$key.'</comment>');
+            return $this->line('<comment>' . $key . '</comment>');
         }
 
         // Next, we will replace the application key in the environment file so it is
@@ -46,7 +46,7 @@ class KeyGenerateCommand extends Command
 
         $this->laravel['config']['app.key'] = $key;
 
-        $this->info("Application key [$key] set successfully.");
+        $this->info('Application key set successfully.');
     }
 
     /**
@@ -56,7 +56,7 @@ class KeyGenerateCommand extends Command
      */
     protected function generateRandomKey()
     {
-        return 'base64:'.base64_encode(
+        return 'base64:' . base64_encode(
             Encrypter::generateKey($this->laravel['config']['app.cipher'])
         );
     }
@@ -90,7 +90,7 @@ class KeyGenerateCommand extends Command
     {
         file_put_contents($this->environmentFilePath(), preg_replace(
             $this->keyReplacementPattern(),
-            'APP_KEY='.$key,
+            'APP_KEY=' . $key,
             file_get_contents($this->environmentFilePath())
         ));
     }
@@ -102,7 +102,7 @@ class KeyGenerateCommand extends Command
      */
     protected function keyReplacementPattern()
     {
-        $escaped = preg_quote('='.$this->laravel['config']['app.key'], '/');
+        $escaped = preg_quote('=' . $this->laravel['config']['app.key'], '/');
 
         return "/^APP_KEY{$escaped}/m";
     }
